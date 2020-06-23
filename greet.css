@@ -1,0 +1,30 @@
+.box {
+    padding: 0.75em;
+    border-radius: 0.5em;
+    border: 3px solid #ddd;
+    border-color: aqua;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+input[type=text]{
+    min-height: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+h1 {
+    font-style: italic;
+
+    
+
+}
+
+.button {
+     
+    background-color: aqua;
+    font-size: 15px;
+    background-size: 20px;
+
+}
