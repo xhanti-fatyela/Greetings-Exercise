@@ -34,3 +34,9 @@ h1 {
 padding: 20px;
 
 }
+
+.greetMessage {
+
+    font-size: 30px;
+    background-color: blueviolet;
+}
