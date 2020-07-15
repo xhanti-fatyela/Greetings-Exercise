@@ -1,3 +1,17 @@
+body {
+
+     position: relative;
+     margin: 0 auto;
+     padding: 0 0px;
+     box-sizing: border-box;
+     max-width: 960px;
+     width: 100%;
+     background-color: rgb(145, 131, 131);
+
+
+
+
+}
 .box {
     padding: 0.75em;
     border-radius: 0.5em;
@@ -15,7 +29,7 @@ input[type=text]{
 }
 
 h1 {
-    font-style: italic;
+    font-style: italic
 
     
 
@@ -24,9 +38,11 @@ h1 {
 .button {
      
     background-color: aqua;
-    font-size: 15px;
-    background-size: 20px;
+    font-size: 20px;
+    background-size: 30px;
+    box-sizing: border-box
 
+    
 }
 
 .radio {
@@ -39,4 +55,10 @@ padding: 20px;
 
     font-size: 30px;
     background-color: blueviolet;
+}
+
+.button:hover {
+
+    color: black;
+    background-color: white;
 }
