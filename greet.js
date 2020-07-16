@@ -7,24 +7,40 @@ const greetMessage = document.querySelector(".greetMessage")
 const myCounter = document.querySelector(".myCounter")
 const resetBtn = document.querySelector(".resetBtn")
 
- var greetInstance = GreetingFac()
+ var greetInstance = GreetingFac(greetData)
+
+ var greetData = localStorage.getItem("nameGreeted") ? JSON.parse(localStorage.getItem("nameGreeted")) : {};
+ 
 
 function greetBtnClicked() {
 
 var radioBtnChecked = document.querySelector(".greetRadioBtn:checked")
 var theName = greetText.value
 
-if(radioBtnChecked){
+if(radioBtnChecked === "English"){
 
-var valueChecked = radioBtnChecked.value
+  greetInstance.langMessages()
 
-greetInstance.greetName( theName , valueChecked)
+}
 
-    
+if(radioBtnChecked === "IsiXhosa"){
+
+    greetInstance.langMessages()
+}
+
+if(radioBtnChecked === "Afrikaans")
 
 }
 
 
+
+function resetBtnClicked (){
+
+greetInstance.clearObj()
+
 }
+
+
 
 greetBtn.addEventListener("click" , greetBtnClicked)
+resetBtn.addEventListener("click" , resetBtnClicked)
