@@ -7,40 +7,46 @@ const greetMessage = document.querySelector(".greetMessage")
 const myCounter = document.querySelector(".myCounter")
 const resetBtn = document.querySelector(".resetBtn")
 
- var greetInstance = GreetingFac(greetData)
 
- var greetData = localStorage.getItem("nameGreeted") ? JSON.parse(localStorage.getItem("nameGreeted")) : {};
- 
+
+var greetData = localStorage.getItem("nameGreeted") ? JSON.parse(localStorage.getItem("nameGreeted")) : {};
+var greetInstance = GreetingFac(greetData)
 
 function greetBtnClicked() {
 
-var radioBtnChecked = document.querySelector(".greetRadioBtn:checked")
-var theName = greetText.value
+    var radioBtnChecked = document.querySelector(".greetRadioBtn:checked")
+    var theName = greetText.value
 
-if(radioBtnChecked === "English"){
+    if (radioBtnChecked.value === "English") {
 
-  greetInstance.langMessages()
+        greetInstance.langMessages()
 
-}
+    }
 
-if(radioBtnChecked === "IsiXhosa"){
+    if (radioBtnChecked.value === "IsiXhosa") {
 
-    greetInstance.langMessages()
-}
+        greetInstance.langMessages()
+    }
 
-if(radioBtnChecked === "Afrikaans")
+    if (radioBtnChecked.value === "Afrikaans") {
+        greetInstance.langMessages()
+    }
 
-}
-
-
-
-function resetBtnClicked (){
-
-greetInstance.clearObj()
+    if (theName) {
+        greetInstance.setName()
+    }
 
 }
 
 
 
-greetBtn.addEventListener("click" , greetBtnClicked)
-resetBtn.addEventListener("click" , resetBtnClicked)
+function resetBtnClicked() {
+
+    greetInstance.clearObj()
+
+}
+
+
+
+greetBtn.addEventListener("click", greetBtnClicked)
+resetBtn.addEventListener("click", resetBtnClicked)
