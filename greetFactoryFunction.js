@@ -3,8 +3,10 @@ function Greetings() {
     var objMap = {};
 
     function setName(name) {
-        if (objMap[name] === undefined) {
-            objMap[name] = 0;
+        var lowerObj = name.toLowerCase()
+
+        if (objMap[lowerObj] === undefined) {
+            objMap[lowerObj] = 0;
         }
     }
 

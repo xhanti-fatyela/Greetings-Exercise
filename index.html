@@ -16,7 +16,8 @@
   <div class="box">
     <h1>Greeting</h1>
 
-<input type="text" name="name" value="" placeholder="enter your name" class="greetText">
+<input type="text" name="name" value="" placeholder="enter your name" class="greetText" onkeypress="return (event.charCode > 64 && 
+event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
     
 
 
@@ -28,7 +29,7 @@
     <input type="radio" name="greetRadioBtn" class="greetRadioTwo" value="Afrikaans">
     <span class="label-body">Afrikaans</span>
 
-    <input type="radio" name="greetRadioBtn" class="greetRadioThree" value="isiXhosa">
+    <input type="radio" name="greetRadioBtn" class="greetRadioThree" value="IsiXhosa">
     <span class="label-body">isiXhosa</span>
 
 </div>
@@ -40,11 +41,14 @@
 </div>
 
 <div class="greetMessage"></div>
+<div class="errorMessage"></div>
 </div>
+
+
 
 </body>
 
-
+<script src="greetFactoryFunction.js"></script>
 <script src="greet.js"></script>
 
 
