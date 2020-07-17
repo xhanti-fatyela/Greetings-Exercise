@@ -9,7 +9,7 @@ const myCounter = document.querySelector(".myCounter")
 const resetBtn = document.querySelector(".resetBtn")
 
 
-var greetData = localStorage.getItem("nameGreeted").toLowerCase() ? JSON.parse(localStorage.getItem("nameGreeted")) : {};
+var greetData = localStorage.getItem("nameGreeted") ? JSON.parse(localStorage.getItem("nameGreeted")) : {};
 
 var greetInstance = Greetings(greetData)
 
