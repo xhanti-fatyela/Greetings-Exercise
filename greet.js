@@ -22,11 +22,26 @@ function greetBtnClicked() {
 
     var radioBtnChecked = document.querySelector("input[name='greetRadioBtn']:checked")
     var theName = greetText.value
-    greetInstance.setName(theName)
-    greetMessage.innerHTML = greetInstance.errorHandling(theName, radioBtnChecked)
-    if (radioBtnChecked) {
-        greetMessage.innerHTML = greetInstance.langMessages(theName, radioBtnChecked.value)
 
+    //greetMessage.innerHTML = greetInstance.errorHandling(theName, radioBtnChecked)
+
+    if (theName === "" && radioBtnChecked === null) {
+        greetMessage.innerHTML = "Please enter name and Select language"
+    }
+
+    else if (theName === "") {
+        greetMessage.innerHTML = "Please enter name"
+    }
+
+    else if (radioBtnChecked === null) {
+
+        greetMessage.innerHTML = "Please select language"
+    }
+
+
+    else if (radioBtnChecked) {
+        greetInstance.setName(theName)
+        greetMessage.innerHTML = greetInstance.langMessages(theName, radioBtnChecked.value)
 
     }
 

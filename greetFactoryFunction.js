@@ -8,6 +8,8 @@ function Greetings() {
         if (objMap[lowerObj] === undefined) {
             objMap[lowerObj] = 0;
         }
+
+        
     }
 
     function langMessages(name, lang) {
@@ -30,17 +32,7 @@ function Greetings() {
         return Object.keys(objMap).length
     }
 
-    function errorHandling(name, lang) {
-         if (name === "" && lang === "") {
-            return "Please enter the name and select language"
-         }
-        if (!name) {
-            return "Please enter the name"
-        }
-        if (!lang) {
-            return "Please select the language"
-        }
-    }
+
 
 
     function clearObj() {
@@ -53,7 +45,7 @@ function Greetings() {
         counter,
         langMessages,
         clearObj,
-        errorHandling
+
     }
 }
 

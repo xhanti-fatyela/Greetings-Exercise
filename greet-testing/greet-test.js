@@ -67,50 +67,7 @@ describe("the Greetins Exercise", function () {
     });
 
 
-    it("should return message if name is not entered", function () {
 
-        let greetingsEX = Greetings()
-        greetingsEX.langMessages("", "English")
-        greetingsEX.langMessages("", "Afrikaans")
-        greetingsEX.langMessages("", "IsiXhosa")
-        greetingsEX.errorHandling("")
-
-
-        assert.equal(greetingsEX.errorHandling("", "English"), "Please enter the name")
-        assert.equal(greetingsEX.errorHandling("", "Afrikaans"), "Please enter the name")
-        assert.equal(greetingsEX.errorHandling("", "IsiXhosa"), "Please enter the name")
-
-    });
-
-    it("should return message if language is not selected", function () {
-
-        let greetingsEX = Greetings()
-        greetingsEX.langMessages("Lona", "")
-        greetingsEX.langMessages("Dave", "")
-        greetingsEX.langMessages("Luke", "")
-        greetingsEX.errorHandling("")
-
-
-        assert.equal(greetingsEX.errorHandling("Lona", ""), "Please select the language")
-        assert.equal(greetingsEX.errorHandling("Dave", ""), "Please select the language")
-        assert.equal(greetingsEX.errorHandling("Luke", ""), "Please select the language")
-
-    });
-
-
-
-
-    //it("should return message if language is not selected & name is not entered", function () {
-
-    //let greetingsEX = Greetings()
-    //greetingsEX.langMessages("", "")
-    //greetingsEX.errorHandling("","")
-
-
-    //assert.equal(greetingsEX.errorHandling("",""),"Please enter the name and select language")
-
-
-    //});
 
     it("conter should not increase the number name is duplicated ", function () {
  
