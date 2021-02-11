@@ -7,44 +7,50 @@
 <title>Greet exercise</title>
 
 <link rel="stylesheet" href="greet.css">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
 
 </head>
 
 <body>
-  <div class="box">
-    <h1>Greeting</h1>
+<div class="container">
+<div class="row">
+<div class="col-12" style="text-align: center;">
+  <h1>Greeting</h1>
 
-<input type="text" name="name" value="" placeholder="enter your name" class="greetText" onkeypress="return (event.charCode > 64 && 
-event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
-    
-
-
-  <div class="radio">
-
-    <input type="radio" name="greetRadioBtn" class="greetRadioOne" value="English">
-    <span class="label-body">English</span>
-
-    <input type="radio" name="greetRadioBtn" class="greetRadioTwo" value="Afrikaans">
-    <span class="label-body">Afrikaans</span>
-
-    <input type="radio" name="greetRadioBtn" class="greetRadioThree" value="IsiXhosa">
-    <span class="label-body">isiXhosa</span>
-
+  <input type="text" name="name" value="" placeholder="enter your name" class="greetText" onkeypress="return (event.charCode > 64 && 
+  event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
+      
+  <br>
+  <br>
+  
+    <div class="radio">
+  
+      <input type="radio" name="greetRadioBtn" class="greetRadio" value="English">
+      <span class="label-body">English</span>
+  
+      <input type="radio" name="greetRadioBtn" class="greetRadio" value="Afrikaans">
+      <span class="label-body">Afrikaans</span>
+  
+      <input type="radio" name="greetRadioBtn" class="greetRadio" value="IsiXhosa">
+      <span class="label-body">isiXhosa</span>
+  
+  </div>
+  
+  <h2>Counter <span class="myCounter"></span></h2>
+  
+  <div><button class="button greetBtn" on type="button" name="button">Greet Me</button>
+       <button class="button resetBtn" on type="button" name="button">Reset</button>
+  </div>
+  
+  <div class="greetMessage"></div>
+  <div class="errorMessage"></div>
 </div>
-
-<h2>Counter <span class="myCounter"></span></h2>
-
-<div><button class="button greetBtn" on type="button" name="button">Greet Me</button>
-     <button class="button resetBtn" on type="button" name="button">Reset</button>
 </div>
-
-<div class="greetMessage"></div>
-<div class="errorMessage"></div>
 </div>
-
-
 
 </body>
 

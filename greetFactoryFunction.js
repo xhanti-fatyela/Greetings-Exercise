@@ -1,6 +1,6 @@
-function Greetings() {
+function Greetings(greet) {
 
-    var objMap = {};
+    var objMap =  greet || {};
 
     function setName(name) {
         var lowerObj = name.toLowerCase()
